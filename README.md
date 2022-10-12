@@ -9,9 +9,9 @@ I took part in this challenge to test how my HTML and CSS skills compare to thos
 ## Preview
 
 Here are some screenshots of my finished solution
-![Desktop Screenshot](/images/for-README/screencapture-loopstudios.png)<br/>
-![Mobile Version](/images/for-README/loopstudios_capture_mobile.png)<br/>
-![Creations Grid](/images/for-README/creations-grid-capture.jpg)<br/>
+![Desktop Screenshot](/images/for-README/screencapture-loopstudios.png)&nbsp;&nbsp;&nbsp;
+![Mobile Version](/images/for-README/loopstudios_capture_mobile.png)&nbsp;&nbsp;&nbsp;
+![Creations Grid](/images/for-README/creations-grid-capture.jpg)&nbsp;&nbsp;&nbsp;
 
 ## Live Website
 
