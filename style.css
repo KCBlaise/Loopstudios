@@ -230,6 +230,10 @@ footer{
     flex-direction: column;
 }
 
+.footer-logo{
+    cursor: pointer;
+}
+
 .ftr-right{
     display: flex;
     flex-direction: column;
@@ -246,6 +250,7 @@ footer{
 .social-icons img{
     margin: 0.5rem 1rem;
     padding: 0 0 7px;
+    cursor: pointer;
 }
 
 .social-icons img:hover{
