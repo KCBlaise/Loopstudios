@@ -8,10 +8,10 @@ I took part in this challenge to test my HTML and CSS skills compare to those of
 
 ## Preview
 
-Here are some screenshots of my finished solution
-![Desktop Screenshot](/images/for-README/screencapture-loopstudios.png)
-![Mobile Version](/images/for-README/loopstudios_capture_mobile.png)
-![Creations Grid](/images/for-README/creations-grid-capture.jpg)
+Here are some screenshots of my finished solution<br/><br/>
+![Desktop Screenshot](/images/for-README/screencapture-loopstudios.png)<br/><br/><br/>
+![Mobile Version](/images/for-README/loopstudios_capture_mobile.png)<br/><br/><br/>
+![Creations Grid](/images/for-README/creations-grid-capture.jpg)<br/><br/><br/>
 
 ## Live Website
 
