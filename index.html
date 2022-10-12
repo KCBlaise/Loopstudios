@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <title>Loopstudios</title>
+    <meta name="description" content="A solution to the Loopstudios landing page challenge on Frontend Mentor written in simple HTML and CSS.">
+    <meta name="author" content="Blaise Okoyechira">
 </head>
+
 <body>
     <header>
         <div>
@@ -15,20 +18,59 @@
                 <img src="./images/logo.svg" class="header-logo">
 
                 <nav>
+                    <svg id="hamburger-btn" width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
+
                     <ul>
-                        <li class="nav-items">About</li>
-                        <li class="nav-items">Careers</li>
-                        <li class="nav-items">Events</li>
-                        <li class="nav-items">Products</li>
-                        <li class="nav-items">Support</li>
+                        <li class="nav-items">
+                            <a>About</a>
+                        </li>
+                        <li class="nav-items">
+                            <a>Careers</a>
+                        </li>
+                        <li class="nav-items">
+                            <a>Events</a>
+                        </li>
+                        <li class="nav-items">
+                            <a>Products</a>
+                        </li>
+                        <li class="nav-items">
+                            <a>Support</a>
+                        </li>
                     </ul>
+
+                    <div class="mobile-nav hidden">
+                        <div class="mobile-nav-top">
+                            <img src="./images/logo.svg" class="header-logo">
+
+                            <svg id="close-nav-btn" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" fill="#FFF" fill-rule="evenodd"/></svg>
+                        </div>
+
+                        <ul>
+                            <li class="nav-items">
+                                <a>About</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Careers</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Events</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Products</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Support</a>
+                            </li>
+                        </ul>                        
+                    </div>
+
                 </nav>
             </section>
 
             <div class="landing max-width-wrapper">
-                <div class="landing-content">
+                <h1 class="landing-content">
                     Immersive <div>experiences</div> that deliver
-                </div>
+                </h1>
             </div>
         </div>
     </header>
@@ -126,11 +168,21 @@
                 <div>
                     <nav class="bottom-nav">
                         <ul>
-                            <li class="nav-items">About</li>
-                            <li class="nav-items">Careers</li>
-                            <li class="nav-items">Events</li>
-                            <li class="nav-items">Products</li>
-                            <li class="nav-items">Support</li>
+                            <li class="nav-items">
+                                <a>About</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Careers</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Events</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Products</a>
+                            </li>
+                            <li class="nav-items">
+                                <a>Support</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -154,5 +206,7 @@
 
         </div>
     </footer>
+
+    <script src="./navControl.js"></script>
 </body>
 </html>

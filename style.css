@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+:root{
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +18,10 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
+}
+
+div.hidden{
+    display: none;
 }
 
 .max-width-wrapper{
@@ -21,11 +35,11 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: var(--white);
 }
 
 header > div{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(var(--black-rgb), 0.4);
 }
 
 .header-nav-bar{
@@ -40,17 +54,45 @@ header > div{
 
 .header-logo{
     height: 2rem;
+    cursor: pointer;
+}
+
+.header-nav-bar nav svg{
+    display: none;
 }
 
 nav ul{
     display: flex;
 }
 
-nav ul .nav-items{
+.header-nav-bar nav ul{
+    align-items: center;
+}
+
+.nav-items{
     list-style: none;
     margin: 0 1rem;
+    padding: 0 0 7px;
     font-family: 'Alata', sans-serif;
+    cursor: pointer;
 }
+
+.nav-items:hover{
+    padding: 0;
+}
+
+nav .nav-items:hover ::after{
+    content: '';
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 5px;
+    border-bottom: 2px solid var(--white);
+}
+
+/* .mobile-nav{
+    display: none;
+} */
 
 header .landing{
     min-height: calc(100vh - 160px);
@@ -63,7 +105,8 @@ header .landing{
 .landing-content{
     text-transform: uppercase;
     font-size: 4rem;
-    border: #fff solid 2px;
+    font-weight: 400;
+    border: var(--white) solid 2px;
     max-width: 600px;
     padding: 2rem;
 }
@@ -79,7 +122,7 @@ header .landing{
 }
 
 .about-text{
-    background-color: #fff;
+    background-color: var(--white);
     padding: 3rem;
     max-width: 500px;
     position: absolute;
@@ -97,7 +140,7 @@ header .landing{
 
 .about-text-info{
     font-family: 'Alata', sans-serif;
-    color: hsl(0, 0%, 55%);
+    color: var(--dark-gray);
 }
 
 .creations{
@@ -107,7 +150,7 @@ header .landing{
 }
 
 .creations .creations-header-wrap{
-    color: #000;
+    color: var(--black);
     display: flex;
     justify-content: space-between;
 }
@@ -118,13 +161,18 @@ header .landing{
 }
 
 .creations .see-all{
-    border: #000 1px solid;
-    background-color: #fff;
+    border: var(--black) 1px solid;
+    background-color: var(--white);
     padding: 0.5rem 2rem;
     font-size: 0.7rem;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.creations .see-all:hover{
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .creations .creations-grid{
@@ -138,6 +186,7 @@ header .landing{
 .creations figure{
     max-width: 100%;
     position: relative;
+    cursor: pointer;
 }
 
 .creations figure img{
@@ -148,7 +197,7 @@ header .landing{
     position: absolute;
     bottom: 2rem;
     left: 1.5rem;
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
 }
 
@@ -156,17 +205,17 @@ header .landing{
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.8)
+    background-color: rgba(var(--white-rgb), 0.8)
 }
 
 .creations figure:hover figcaption{
-    color: #000;
+    color: var(--black);
 }
 
 footer{
-    background-color: #000;
-    color: #fff;
-    height: 160px;
+    background-color: var(--black);
+    color: var(--white);
+    height: 200px;
     padding: 2rem 0 0;
 }
 
@@ -179,25 +228,29 @@ footer{
 .ftr-left{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    align-content: space-between;
 }
 
 .ftr-right{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    align-content: space-between;
+    justify-content: center;
     /* margin: 2rem 0; */
 }
 
 .social-icons{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .social-icons img{
-    padding: 0 1rem;
+    margin: 0.5rem 1rem;
+    padding: 0 0 7px;
+}
+
+.social-icons img:hover{
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--white);
 }
 
 .bottom-nav{
@@ -209,9 +262,9 @@ footer{
 }
 
 .copyright{
-    color: hsl(0, 0%, 55%);
+    color: var(--very-dark-gray);
     font-family: 'Alata', sans-serif;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 @media screen and (max-width:870px) {
@@ -228,6 +281,47 @@ footer{
 @media screen and (max-width:768px){
     .header-nav-bar nav ul{
         display: none;
+    }
+
+    .mobile-nav{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--black);
+        position: fixed;
+        z-index: 1;
+        inset: 0;
+        min-height: 100vh;
+    }
+    
+    .mobile-nav-top{
+        padding: 2rem 1rem;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-nav-bar nav .mobile-nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: calc(100vh - 100px);
+    }
+    
+    .header-nav-bar nav .mobile-nav ul .nav-items{
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .mobile-nav .nav-items:hover ::after{
+        width: 100%;
+    }
+
+    .header-nav-bar nav svg{
+        display: block;
     }
 
     .about{
@@ -283,6 +377,11 @@ footer{
 
     .bottom-nav ul{
         flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-nav .nav-items:hover ::after{
+        width: 100%;
     }
 
     .bottom-nav ul .nav-items{
@@ -316,7 +415,7 @@ footer{
     }
 
     header > div{
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(var(--black-rgb), 0.2);
     }
 
     .header-nav-bar{
@@ -332,11 +431,6 @@ footer{
         margin: 0 1rem;
         justify-content: center;
         min-height: calc(100vh - 100px);
-    }
-
-
-    .header-nav-bar > nav ul .nav-items{
-        display: none;
     }
 
     .landing-content{
@@ -362,7 +456,8 @@ footer{
     }
 
     .creations{
-        margin: 0 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .creations .creations-header-wrap h2{
