@@ -15,6 +15,6 @@ Here are some screenshots of my finished solution<br/><br/>
 
 ## Live Website
 
-Kindly visit the live website <a target="_blank" href="blaise-loopstudios.vercel.app">here</a>
+Kindly visit the live website <a target="_blank" href="https://blaise-loopstudios.vercel.app/">here</a>
 
 Thank you for looking through my solution. Cheers!
